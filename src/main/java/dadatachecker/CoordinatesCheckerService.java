@@ -60,7 +60,12 @@ public class CoordinatesCheckerService {
     }
 
     String getReportLine(Address source, Address response, double distance) {
-        return source.getName() + " " + response.getData().getLatitude() + " " + response.getData().getLongitude()
-                + " " + source.getData().getLatitude() + " " + source.getData().getLongitude() + " " + distance;
+        return String.format("%s %f %f %f %f %.3f",
+                source.getName(),
+                response.getData().getLatitude(),
+                response.getData().getLongitude(),
+                source.getData().getLatitude(),
+                source.getData().getLongitude(),
+                distance);
     }
 }
