@@ -2,3 +2,4 @@ report.txt
 *.iml
 /target
 /.idea
+token.txt
